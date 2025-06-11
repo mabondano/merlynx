@@ -56,3 +56,37 @@ We welcome feedback, feature suggestions, and early contributors!
 For discussion and updates, visit our [project page](https://github.com/your-org/melynx).
 
 ---
+
+##  **Merlynix (Lenguaje modular para IA + DSP + LLM)**
+
+├── merlynix-core
+│   ├── Parser del DSL
+│   ├── Manejador de pipeline y ejecución
+│   └── CLI del lenguaje (.mlnx)
+│
+├── merlynix-rules
+│   └── Motor de reglas basado en Drools
+│
+├── merlynix-datalog
+│   └── Submotor lógico inspirado en Datalog (consultas, relaciones)
+│
+├── merlynix-logic (opcional)
+│   └── Conector JPL hacia SWI-Prolog para razonamiento simbólico
+│
+├── merlynix-ml
+│   ├── Capa de aprendizaje automático
+│   ├── Modelos ONNX, DL4J, o puente hacia Python
+│   └── Lógica para decisiones IA
+│
+├── merlynix-signals
+│   └── Procesamiento de señales, operaciones DSP, pila RPN
+│
+└── merlynix-llm
+    └── Wrapper para modelos LLaMA.cpp, gguf, o vía HTTP local
+
+Aplicaciones:
+- MerLabStudio → usa merlynix-signals + core + ml
+- StackFlowServer → usa merlynix-rules + datalog + core
+
+
+---
