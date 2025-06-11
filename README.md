@@ -56,10 +56,15 @@ We welcome feedback, feature suggestions, and early contributors!
 For discussion and updates, visit our [project page](https://github.com/your-org/melynx).
 
 ---
+# Merlynix Modular Architecture
 
-##  **Merlynix (Lenguaje modular para IA + DSP + LLM)**
+Merlynix — A modular language for AI, Signal Processing, and LLM Integration
+
+## Project Structure
 
 ```plaintext
+
+Merlynix (Lenguaje modular para IA + DSP + LLM)
 
 ├── merlynix-core
 │   ├── Parser del DSL
@@ -91,5 +96,13 @@ Aplicaciones:
 - StackFlowServer → usa merlynix-rules + datalog + core
 
 ```
+
+## Integrated Applications
+
+- **MerLabStudio**
+  - Uses: `merlynix-signals`, `merlynix-core`, `merlynix-ml`
+
+- **StackFlowServer**
+  - Uses: `merlynix-rules`, `merlynix-datalog`, `merlynix-core`
 
 ---
