@@ -59,6 +59,8 @@ For discussion and updates, visit our [project page](https://github.com/your-org
 
 ##  **Merlynix (Lenguaje modular para IA + DSP + LLM)**
 
+```plaintext
+
 ├── merlynix-core
 │   ├── Parser del DSL
 │   ├── Manejador de pipeline y ejecución
@@ -88,5 +90,6 @@ Aplicaciones:
 - MerLabStudio → usa merlynix-signals + core + ml
 - StackFlowServer → usa merlynix-rules + datalog + core
 
+```
 
 ---
