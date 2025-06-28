@@ -43,5 +43,6 @@ public class MerlynxCore {
         // Imprimir el árbol sintáctico en consola
         System.out.println(tree.toStringTree(parser));
 
+        
     }
 }
