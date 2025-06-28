@@ -1,11 +1,13 @@
-// Generated from SimpleLang.g4 by ANTLR 4.13.0
+package com.merlab.merlynx.generated;
+
+// Generated from SimpleLangParser.g4 by ANTLR 4.13.0
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
  * This interface defines a complete listener for a parse tree produced by
  * {@link SimpleLangParser}.
  */
-public interface SimpleLangListener extends ParseTreeListener {
+public interface SimpleLangParserListener extends ParseTreeListener {
 	/**
 	 * Enter a parse tree produced by {@link SimpleLangParser#program}.
 	 * @param ctx the parse tree

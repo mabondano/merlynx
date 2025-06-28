@@ -1,10 +1,10 @@
 package com.merlab.merlynx.generated;
 
-// Generated from SimpleLang.g4 by ANTLR 4.13.0
+// Generated from SimpleLangParser.g4 by ANTLR 4.13.0
 import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
 
 /**
- * This class provides an empty implementation of {@link SimpleLangVisitor},
+ * This class provides an empty implementation of {@link SimpleLangParserVisitor},
  * which can be extended to create a visitor which only needs to handle a subset
  * of the available methods.
  *
@@ -12,7 +12,7 @@ import org.antlr.v4.runtime.tree.AbstractParseTreeVisitor;
  * operations with no return type.
  */
 @SuppressWarnings("CheckReturnValue")
-public class SimpleLangBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements SimpleLangVisitor<T> {
+public class SimpleLangParserBaseVisitor<T> extends AbstractParseTreeVisitor<T> implements SimpleLangParserVisitor<T> {
 	/**
 	 * {@inheritDoc}
 	 *

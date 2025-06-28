@@ -1,8 +1,6 @@
 package com.merlab.merlynx.generated;
 
-
-// Generated from SimpleLang.g4 by ANTLR 4.13.0
-import com.merlab.merlynx.generated.SimpleLangListener;
+// Generated from SimpleLangParser.g4 by ANTLR 4.13.0
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
@@ -20,8 +18,8 @@ public class SimpleLangParser extends Parser {
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		ID=10, INT=11, WS=12;
+		ID=1, INT=2, WS=3, PRINT=4, SEMI=5, EQ=6, LPAREN=7, RPAREN=8, PLUS=9, 
+		MINUS=10, MULT=11, DIV=12;
 	public static final int
 		RULE_program = 0, RULE_statement = 1, RULE_printStmt = 2, RULE_assignStmt = 3, 
 		RULE_exprStmt = 4, RULE_expr = 5;
@@ -34,14 +32,15 @@ public class SimpleLangParser extends Parser {
 
 	private static String[] makeLiteralNames() {
 		return new String[] {
-			null, "'print'", "';'", "'='", "'*'", "'/'", "'+'", "'-'", "'('", "')'"
+			null, null, null, null, "'print'", "';'", "'='", "'('", "')'", "'+'", 
+			"'-'", "'*'", "'/'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
-			null, null, null, null, null, null, null, null, null, null, "ID", "INT", 
-			"WS"
+			null, "ID", "INT", "WS", "PRINT", "SEMI", "EQ", "LPAREN", "RPAREN", "PLUS", 
+			"MINUS", "MULT", "DIV"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -79,7 +78,7 @@ public class SimpleLangParser extends Parser {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "SimpleLang.g4"; }
+	public String getGrammarFileName() { return "SimpleLangParser.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -110,15 +109,15 @@ public class SimpleLangParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_program; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).enterProgram(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).enterProgram(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).exitProgram(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).exitProgram(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SimpleLangVisitor ) return ((SimpleLangVisitor<? extends T>)visitor).visitProgram(this);
+			if ( visitor instanceof SimpleLangParserVisitor ) return ((SimpleLangParserVisitor<? extends T>)visitor).visitProgram(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -133,7 +132,7 @@ public class SimpleLangParser extends Parser {
 			setState(15);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 3330L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 150L) != 0)) {
 				{
 				{
 				setState(12);
@@ -176,15 +175,15 @@ public class SimpleLangParser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).enterStatement(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).enterStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).exitStatement(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).exitStatement(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SimpleLangVisitor ) return ((SimpleLangVisitor<? extends T>)visitor).visitStatement(this);
+			if ( visitor instanceof SimpleLangParserVisitor ) return ((SimpleLangParserVisitor<? extends T>)visitor).visitStatement(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -232,24 +231,26 @@ public class SimpleLangParser extends Parser {
 
 	@SuppressWarnings("CheckReturnValue")
 	public static class PrintStmtContext extends ParserRuleContext {
+		public TerminalNode PRINT() { return getToken(SimpleLangParser.PRINT, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
+		public TerminalNode SEMI() { return getToken(SimpleLangParser.SEMI, 0); }
 		public PrintStmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_printStmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).enterPrintStmt(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).enterPrintStmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).exitPrintStmt(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).exitPrintStmt(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SimpleLangVisitor ) return ((SimpleLangVisitor<? extends T>)visitor).visitPrintStmt(this);
+			if ( visitor instanceof SimpleLangParserVisitor ) return ((SimpleLangParserVisitor<? extends T>)visitor).visitPrintStmt(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -261,11 +262,11 @@ public class SimpleLangParser extends Parser {
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(25);
-			match(T__0);
+			match(PRINT);
 			setState(26);
 			expr(0);
 			setState(27);
-			match(T__1);
+			match(SEMI);
 			}
 		}
 		catch (RecognitionException re) {
@@ -282,24 +283,26 @@ public class SimpleLangParser extends Parser {
 	@SuppressWarnings("CheckReturnValue")
 	public static class AssignStmtContext extends ParserRuleContext {
 		public TerminalNode ID() { return getToken(SimpleLangParser.ID, 0); }
+		public TerminalNode EQ() { return getToken(SimpleLangParser.EQ, 0); }
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
+		public TerminalNode SEMI() { return getToken(SimpleLangParser.SEMI, 0); }
 		public AssignStmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_assignStmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).enterAssignStmt(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).enterAssignStmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).exitAssignStmt(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).exitAssignStmt(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SimpleLangVisitor ) return ((SimpleLangVisitor<? extends T>)visitor).visitAssignStmt(this);
+			if ( visitor instanceof SimpleLangParserVisitor ) return ((SimpleLangParserVisitor<? extends T>)visitor).visitAssignStmt(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -313,11 +316,11 @@ public class SimpleLangParser extends Parser {
 			setState(29);
 			match(ID);
 			setState(30);
-			match(T__2);
+			match(EQ);
 			setState(31);
 			expr(0);
 			setState(32);
-			match(T__1);
+			match(SEMI);
 			}
 		}
 		catch (RecognitionException re) {
@@ -336,21 +339,22 @@ public class SimpleLangParser extends Parser {
 		public ExprContext expr() {
 			return getRuleContext(ExprContext.class,0);
 		}
+		public TerminalNode SEMI() { return getToken(SimpleLangParser.SEMI, 0); }
 		public ExprStmtContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exprStmt; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).enterExprStmt(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).enterExprStmt(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).exitExprStmt(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).exitExprStmt(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SimpleLangVisitor ) return ((SimpleLangVisitor<? extends T>)visitor).visitExprStmt(this);
+			if ( visitor instanceof SimpleLangParserVisitor ) return ((SimpleLangParserVisitor<? extends T>)visitor).visitExprStmt(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -364,7 +368,7 @@ public class SimpleLangParser extends Parser {
 			setState(34);
 			expr(0);
 			setState(35);
-			match(T__1);
+			match(SEMI);
 			}
 		}
 		catch (RecognitionException re) {
@@ -383,27 +387,33 @@ public class SimpleLangParser extends Parser {
 		public Token op;
 		public TerminalNode INT() { return getToken(SimpleLangParser.INT, 0); }
 		public TerminalNode ID() { return getToken(SimpleLangParser.ID, 0); }
+		public TerminalNode LPAREN() { return getToken(SimpleLangParser.LPAREN, 0); }
 		public List<ExprContext> expr() {
 			return getRuleContexts(ExprContext.class);
 		}
 		public ExprContext expr(int i) {
 			return getRuleContext(ExprContext.class,i);
 		}
+		public TerminalNode RPAREN() { return getToken(SimpleLangParser.RPAREN, 0); }
+		public TerminalNode MULT() { return getToken(SimpleLangParser.MULT, 0); }
+		public TerminalNode DIV() { return getToken(SimpleLangParser.DIV, 0); }
+		public TerminalNode PLUS() { return getToken(SimpleLangParser.PLUS, 0); }
+		public TerminalNode MINUS() { return getToken(SimpleLangParser.MINUS, 0); }
 		public ExprContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expr; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).enterExpr(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).enterExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof SimpleLangListener ) ((SimpleLangListener)listener).exitExpr(this);
+			if ( listener instanceof SimpleLangParserListener ) ((SimpleLangParserListener)listener).exitExpr(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof SimpleLangVisitor ) return ((SimpleLangVisitor<? extends T>)visitor).visitExpr(this);
+			if ( visitor instanceof SimpleLangParserVisitor ) return ((SimpleLangParserVisitor<? extends T>)visitor).visitExpr(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -439,14 +449,14 @@ public class SimpleLangParser extends Parser {
 				match(ID);
 				}
 				break;
-			case T__7:
+			case LPAREN:
 				{
 				setState(40);
-				match(T__7);
+				match(LPAREN);
 				setState(41);
 				expr(0);
 				setState(42);
-				match(T__8);
+				match(RPAREN);
 				}
 				break;
 			default:
@@ -473,7 +483,7 @@ public class SimpleLangParser extends Parser {
 						setState(47);
 						((ExprContext)_localctx).op = _input.LT(1);
 						_la = _input.LA(1);
-						if ( !(_la==T__3 || _la==T__4) ) {
+						if ( !(_la==MULT || _la==DIV) ) {
 							((ExprContext)_localctx).op = (Token)_errHandler.recoverInline(this);
 						}
 						else {
@@ -494,7 +504,7 @@ public class SimpleLangParser extends Parser {
 						setState(50);
 						((ExprContext)_localctx).op = _input.LT(1);
 						_la = _input.LA(1);
-						if ( !(_la==T__5 || _la==T__6) ) {
+						if ( !(_la==PLUS || _la==MINUS) ) {
 							((ExprContext)_localctx).op = (Token)_errHandler.recoverInline(this);
 						}
 						else {
@@ -554,25 +564,25 @@ public class SimpleLangParser extends Parser {
 		"\u0001\u0005\u0001\u0005\u0001\u0005\u0003\u0005-\b\u0005\u0001\u0005"+
 		"\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0001\u0005\u0005\u0005"+
 		"5\b\u0005\n\u0005\f\u00058\t\u0005\u0001\u0005\u0000\u0001\n\u0006\u0000"+
-		"\u0002\u0004\u0006\b\n\u0000\u0002\u0001\u0000\u0004\u0005\u0001\u0000"+
-		"\u0006\u0007:\u0000\u000f\u0001\u0000\u0000\u0000\u0002\u0017\u0001\u0000"+
-		"\u0000\u0000\u0004\u0019\u0001\u0000\u0000\u0000\u0006\u001d\u0001\u0000"+
-		"\u0000\u0000\b\"\u0001\u0000\u0000\u0000\n,\u0001\u0000\u0000\u0000\f"+
-		"\u000e\u0003\u0002\u0001\u0000\r\f\u0001\u0000\u0000\u0000\u000e\u0011"+
-		"\u0001\u0000\u0000\u0000\u000f\r\u0001\u0000\u0000\u0000\u000f\u0010\u0001"+
-		"\u0000\u0000\u0000\u0010\u0012\u0001\u0000\u0000\u0000\u0011\u000f\u0001"+
-		"\u0000\u0000\u0000\u0012\u0013\u0005\u0000\u0000\u0001\u0013\u0001\u0001"+
-		"\u0000\u0000\u0000\u0014\u0018\u0003\u0004\u0002\u0000\u0015\u0018\u0003"+
-		"\u0006\u0003\u0000\u0016\u0018\u0003\b\u0004\u0000\u0017\u0014\u0001\u0000"+
-		"\u0000\u0000\u0017\u0015\u0001\u0000\u0000\u0000\u0017\u0016\u0001\u0000"+
-		"\u0000\u0000\u0018\u0003\u0001\u0000\u0000\u0000\u0019\u001a\u0005\u0001"+
-		"\u0000\u0000\u001a\u001b\u0003\n\u0005\u0000\u001b\u001c\u0005\u0002\u0000"+
-		"\u0000\u001c\u0005\u0001\u0000\u0000\u0000\u001d\u001e\u0005\n\u0000\u0000"+
-		"\u001e\u001f\u0005\u0003\u0000\u0000\u001f \u0003\n\u0005\u0000 !\u0005"+
-		"\u0002\u0000\u0000!\u0007\u0001\u0000\u0000\u0000\"#\u0003\n\u0005\u0000"+
-		"#$\u0005\u0002\u0000\u0000$\t\u0001\u0000\u0000\u0000%&\u0006\u0005\uffff"+
-		"\uffff\u0000&-\u0005\u000b\u0000\u0000\'-\u0005\n\u0000\u0000()\u0005"+
-		"\b\u0000\u0000)*\u0003\n\u0005\u0000*+\u0005\t\u0000\u0000+-\u0001\u0000"+
+		"\u0002\u0004\u0006\b\n\u0000\u0002\u0001\u0000\u000b\f\u0001\u0000\t\n"+
+		":\u0000\u000f\u0001\u0000\u0000\u0000\u0002\u0017\u0001\u0000\u0000\u0000"+
+		"\u0004\u0019\u0001\u0000\u0000\u0000\u0006\u001d\u0001\u0000\u0000\u0000"+
+		"\b\"\u0001\u0000\u0000\u0000\n,\u0001\u0000\u0000\u0000\f\u000e\u0003"+
+		"\u0002\u0001\u0000\r\f\u0001\u0000\u0000\u0000\u000e\u0011\u0001\u0000"+
+		"\u0000\u0000\u000f\r\u0001\u0000\u0000\u0000\u000f\u0010\u0001\u0000\u0000"+
+		"\u0000\u0010\u0012\u0001\u0000\u0000\u0000\u0011\u000f\u0001\u0000\u0000"+
+		"\u0000\u0012\u0013\u0005\u0000\u0000\u0001\u0013\u0001\u0001\u0000\u0000"+
+		"\u0000\u0014\u0018\u0003\u0004\u0002\u0000\u0015\u0018\u0003\u0006\u0003"+
+		"\u0000\u0016\u0018\u0003\b\u0004\u0000\u0017\u0014\u0001\u0000\u0000\u0000"+
+		"\u0017\u0015\u0001\u0000\u0000\u0000\u0017\u0016\u0001\u0000\u0000\u0000"+
+		"\u0018\u0003\u0001\u0000\u0000\u0000\u0019\u001a\u0005\u0004\u0000\u0000"+
+		"\u001a\u001b\u0003\n\u0005\u0000\u001b\u001c\u0005\u0005\u0000\u0000\u001c"+
+		"\u0005\u0001\u0000\u0000\u0000\u001d\u001e\u0005\u0001\u0000\u0000\u001e"+
+		"\u001f\u0005\u0006\u0000\u0000\u001f \u0003\n\u0005\u0000 !\u0005\u0005"+
+		"\u0000\u0000!\u0007\u0001\u0000\u0000\u0000\"#\u0003\n\u0005\u0000#$\u0005"+
+		"\u0005\u0000\u0000$\t\u0001\u0000\u0000\u0000%&\u0006\u0005\uffff\uffff"+
+		"\u0000&-\u0005\u0002\u0000\u0000\'-\u0005\u0001\u0000\u0000()\u0005\u0007"+
+		"\u0000\u0000)*\u0003\n\u0005\u0000*+\u0005\b\u0000\u0000+-\u0001\u0000"+
 		"\u0000\u0000,%\u0001\u0000\u0000\u0000,\'\u0001\u0000\u0000\u0000,(\u0001"+
 		"\u0000\u0000\u0000-6\u0001\u0000\u0000\u0000./\n\u0005\u0000\u0000/0\u0007"+
 		"\u0000\u0000\u000005\u0003\n\u0005\u000612\n\u0004\u0000\u000023\u0007"+
