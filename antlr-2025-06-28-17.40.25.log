@@ -1,0 +1,269 @@
+2025-06-28 17:40:23:905 grammar LogManager.java:25 before: (LEXER_GRAMMAR MerlynxLexer (@ lexer header {
+  package com.merlab.merlynx.lexer;
+}) (RULES (RULE PIPELINE (BLOCK (ALT 'pipeline'))) (RULE INPUT (BLOCK (ALT 'input'))) (RULE PROCESS (BLOCK (ALT 'process'))) (RULE OUTPUT (BLOCK (ALT 'output'))) (RULE RULE (BLOCK (ALT 'rule'))) (RULE FILTER (BLOCK (ALT 'filter'))) (RULE AMPLIFY (BLOCK (ALT 'amplify'))) (RULE NORMALIZE (BLOCK (ALT 'normalize'))) (RULE COMBINE (BLOCK (ALT 'combine'))) (RULE IF (BLOCK (ALT 'if'))) (RULE THEN (BLOCK (ALT 'then'))) (RULE ELSE (BLOCK (ALT 'else'))) (RULE END (BLOCK (ALT 'end'))) (RULE FOR (BLOCK (ALT 'for'))) (RULE WHILE (BLOCK (ALT 'while'))) (RULE BREAK (BLOCK (ALT 'break'))) (RULE CONTINUE (BLOCK (ALT 'continue'))) (RULE FUNCTION (BLOCK (ALT 'function'))) (RULE RETURN (BLOCK (ALT 'return'))) (RULE VAR (BLOCK (ALT 'var'))) (RULE CONST (BLOCK (ALT 'const'))) (RULE LET (BLOCK (ALT 'let'))) (RULE TRUE (BLOCK (ALT 'true'))) (RULE FALSE (BLOCK (ALT 'false'))) (RULE NULL (BLOCK (ALT 'null'))) (RULE AND (BLOCK (ALT 'and'))) (RULE OR (BLOCK (ALT 'or'))) (RULE NOT (BLOCK (ALT 'not'))) (RULE PRINT (BLOCK (ALT 'print'))) (RULE IMPORT (BLOCK (ALT 'import'))) (RULE INT (BLOCK (ALT 'int'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOL (BLOCK (ALT 'bool'))) (RULE STRING (BLOCK (ALT 'string'))) (RULE SIGNAL (BLOCK (ALT 'signal'))) (RULE ARRAY (BLOCK (ALT 'array'))) (RULE MAP (BLOCK (ALT 'map'))) (RULE FACT (BLOCK (ALT 'fact'))) (RULE QUERY (BLOCK (ALT 'query'))) (RULE FORALL (BLOCK (ALT 'forall'))) (RULE EXISTS (BLOCK (ALT 'exists'))) (RULE TRAIN (BLOCK (ALT 'train'))) (RULE PREDICT (BLOCK (ALT 'predict'))) (RULE MODEL (BLOCK (ALT 'model'))) (RULE DATASET (BLOCK (ALT 'dataset'))) (RULE FFT (BLOCK (ALT 'fft'))) (RULE IFFT (BLOCK (ALT 'ifft'))) (RULE DECIMATE (BLOCK (ALT 'decimate'))) (RULE INTERPOLATE (BLOCK (ALT 'interpolate'))) (RULE IMPLIES (BLOCK (ALT ':-'))) (RULE ID (BLOCK (ALT [a-zA-Z_] (* (BLOCK (ALT [a-zA-Z_0-9])))))) (RULE INT_LITERAL (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE FLOAT_LITERAL (BLOCK (ALT (+ (BLOCK (ALT [0-9]))) '.' (* (BLOCK (ALT [0-9])))))) (RULE STRING_LITERAL (BLOCK (ALT '"' (* (BLOCK (ALT (~ (SET ["\r\n]))))) '"'))) (RULE LINE_COMMENT (BLOCK (LEXER_ALT_ACTION (ALT '//' (* (BLOCK (ALT (~ (SET [\r\n])))))) skip))) (RULE BLOCK_COMMENT (BLOCK (LEXER_ALT_ACTION (ALT '/*' (* (BLOCK (ALT .))) '*/') skip))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT (+ (BLOCK (ALT [ \t\r\n])))) skip))) (RULE NEWLINE (BLOCK (LEXER_ALT_ACTION (ALT (+ (BLOCK (ALT [\r\n])))) (LEXER_ACTION_CALL channel HIDDEN)))) (RULE COLON (BLOCK (ALT ':'))) (RULE LPAREN (BLOCK (ALT '('))) (RULE RPAREN (BLOCK (ALT ')'))) (RULE COMMA (BLOCK (ALT ','))) (RULE PLUS (BLOCK (ALT '+'))) (RULE MINUS (BLOCK (ALT '-'))) (RULE MULT (BLOCK (ALT '*'))) (RULE DIV (BLOCK (ALT '/'))) (RULE GT (BLOCK (ALT '>'))) (RULE LT (BLOCK (ALT '<'))) (RULE GE (BLOCK (ALT '>='))) (RULE LE (BLOCK (ALT '<='))) (RULE EQ (BLOCK (ALT '=='))) (RULE NEQ (BLOCK (ALT '!=')))))
+2025-06-28 17:40:23:939 grammar LogManager.java:25 after: (LEXER_GRAMMAR MerlynxLexer (@ lexer header {
+  package com.merlab.merlynx.lexer;
+}) (RULES (RULE PIPELINE (BLOCK (ALT 'pipeline'))) (RULE INPUT (BLOCK (ALT 'input'))) (RULE PROCESS (BLOCK (ALT 'process'))) (RULE OUTPUT (BLOCK (ALT 'output'))) (RULE RULE (BLOCK (ALT 'rule'))) (RULE FILTER (BLOCK (ALT 'filter'))) (RULE AMPLIFY (BLOCK (ALT 'amplify'))) (RULE NORMALIZE (BLOCK (ALT 'normalize'))) (RULE COMBINE (BLOCK (ALT 'combine'))) (RULE IF (BLOCK (ALT 'if'))) (RULE THEN (BLOCK (ALT 'then'))) (RULE ELSE (BLOCK (ALT 'else'))) (RULE END (BLOCK (ALT 'end'))) (RULE FOR (BLOCK (ALT 'for'))) (RULE WHILE (BLOCK (ALT 'while'))) (RULE BREAK (BLOCK (ALT 'break'))) (RULE CONTINUE (BLOCK (ALT 'continue'))) (RULE FUNCTION (BLOCK (ALT 'function'))) (RULE RETURN (BLOCK (ALT 'return'))) (RULE VAR (BLOCK (ALT 'var'))) (RULE CONST (BLOCK (ALT 'const'))) (RULE LET (BLOCK (ALT 'let'))) (RULE TRUE (BLOCK (ALT 'true'))) (RULE FALSE (BLOCK (ALT 'false'))) (RULE NULL (BLOCK (ALT 'null'))) (RULE AND (BLOCK (ALT 'and'))) (RULE OR (BLOCK (ALT 'or'))) (RULE NOT (BLOCK (ALT 'not'))) (RULE PRINT (BLOCK (ALT 'print'))) (RULE IMPORT (BLOCK (ALT 'import'))) (RULE INT (BLOCK (ALT 'int'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOL (BLOCK (ALT 'bool'))) (RULE STRING (BLOCK (ALT 'string'))) (RULE SIGNAL (BLOCK (ALT 'signal'))) (RULE ARRAY (BLOCK (ALT 'array'))) (RULE MAP (BLOCK (ALT 'map'))) (RULE FACT (BLOCK (ALT 'fact'))) (RULE QUERY (BLOCK (ALT 'query'))) (RULE FORALL (BLOCK (ALT 'forall'))) (RULE EXISTS (BLOCK (ALT 'exists'))) (RULE TRAIN (BLOCK (ALT 'train'))) (RULE PREDICT (BLOCK (ALT 'predict'))) (RULE MODEL (BLOCK (ALT 'model'))) (RULE DATASET (BLOCK (ALT 'dataset'))) (RULE FFT (BLOCK (ALT 'fft'))) (RULE IFFT (BLOCK (ALT 'ifft'))) (RULE DECIMATE (BLOCK (ALT 'decimate'))) (RULE INTERPOLATE (BLOCK (ALT 'interpolate'))) (RULE IMPLIES (BLOCK (ALT ':-'))) (RULE ID (BLOCK (ALT [a-zA-Z_] (* (BLOCK (ALT [a-zA-Z_0-9])))))) (RULE INT_LITERAL (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE FLOAT_LITERAL (BLOCK (ALT (+ (BLOCK (ALT [0-9]))) '.' (* (BLOCK (ALT [0-9])))))) (RULE STRING_LITERAL (BLOCK (ALT '"' (* (BLOCK (ALT (~ (SET ["\r\n]))))) '"'))) (RULE LINE_COMMENT (BLOCK (LEXER_ALT_ACTION (ALT '//' (* (BLOCK (ALT (~ (SET [\r\n])))))) skip))) (RULE BLOCK_COMMENT (BLOCK (LEXER_ALT_ACTION (ALT '/*' (* (BLOCK (ALT .))) '*/') skip))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT (+ (BLOCK (ALT [ \t\r\n])))) skip))) (RULE NEWLINE (BLOCK (LEXER_ALT_ACTION (ALT (+ (BLOCK (ALT [\r\n])))) (LEXER_ACTION_CALL channel HIDDEN)))) (RULE COLON (BLOCK (ALT ':'))) (RULE LPAREN (BLOCK (ALT '('))) (RULE RPAREN (BLOCK (ALT ')'))) (RULE COMMA (BLOCK (ALT ','))) (RULE PLUS (BLOCK (ALT '+'))) (RULE MINUS (BLOCK (ALT '-'))) (RULE MULT (BLOCK (ALT '*'))) (RULE DIV (BLOCK (ALT '/'))) (RULE GT (BLOCK (ALT '>'))) (RULE LT (BLOCK (ALT '<'))) (RULE GE (BLOCK (ALT '>='))) (RULE LE (BLOCK (ALT '<='))) (RULE EQ (BLOCK (ALT '=='))) (RULE NEQ (BLOCK (ALT '!=')))))
+2025-06-28 17:40:24:484 action-translator LogManager.java:25 translate 
+  package com.merlab.merlynx.lexer;
+
+2025-06-28 17:40:24:749 grammar LogManager.java:25 before: (PARSER_GRAMMAR Merlynx (@ header {
+package com.merlab.merlynx.parser;
+}) (OPTIONS (= tokenVocab MerlynxLexer)) (RULES (RULE program (BLOCK (ALT (* (BLOCK (ALT statement))) EOF))) (RULE statement (BLOCK (ALT pipelineDecl) (ALT functionDecl) (ALT ruleDecl) (ALT expressionStatement))) (RULE pipelineDecl (BLOCK (ALT PIPELINE ID NEWLINE pipelineBody END))) (RULE pipelineBody (BLOCK (ALT (+ (BLOCK (ALT pipelineStatement NEWLINE)))))) (RULE pipelineStatement (BLOCK (ALT INPUT COLON ID) (ALT PROCESS COLON expression) (ALT OUTPUT COLON ID))) (RULE functionDecl (BLOCK (ALT FUNCTION ID LPAREN (? (BLOCK (ALT parameterList))) RPAREN block END))) (RULE parameterList (BLOCK (ALT ID (* (BLOCK (ALT COMMA ID)))))) (RULE block (BLOCK (ALT (* (BLOCK (ALT statement)))))) (RULE ruleDecl (BLOCK (ALT RULE ID IMPLIES expression))) (RULE expressionStatement (BLOCK (ALT expression))) (RULE expression (BLOCK (ALT logicalOrExpression))) (RULE logicalOrExpression (BLOCK (ALT logicalAndExpression (* (BLOCK (ALT OR logicalAndExpression)))))) (RULE logicalAndExpression (BLOCK (ALT equalityExpression (* (BLOCK (ALT AND equalityExpression)))))) (RULE equalityExpression (BLOCK (ALT relationalExpression (* (BLOCK (ALT (BLOCK (ALT EQ) (ALT NEQ)) relationalExpression)))))) (RULE relationalExpression (BLOCK (ALT additiveExpression (* (BLOCK (ALT (BLOCK (ALT GT) (ALT LT) (ALT GE) (ALT LE)) additiveExpression)))))) (RULE additiveExpression (BLOCK (ALT multiplicativeExpression (* (BLOCK (ALT (BLOCK (ALT (* (BLOCK (ALT NEWLINE))) (BLOCK (ALT PLUS) (ALT MINUS)) (* (BLOCK (ALT NEWLINE))) multiplicativeExpression)))))))) (RULE multiplicativeExpression (BLOCK (ALT unaryExpression (* (BLOCK (ALT (BLOCK (ALT (* (BLOCK (ALT NEWLINE))) (BLOCK (ALT MULT) (ALT DIV)) (* (BLOCK (ALT NEWLINE))) unaryExpression)))))))) (RULE unaryExpression (BLOCK (ALT unaryOp unaryExpression) (ALT primaryExpression))) (RULE primaryExpression (BLOCK (ALT literal) (ALT ID LPAREN (? (BLOCK (ALT argumentList))) RPAREN) (ALT ID) (ALT LPAREN expression RPAREN))) (RULE functionCall (BLOCK (ALT ID LPAREN (? (BLOCK (ALT argumentList))) RPAREN))) (RULE argumentList (BLOCK (ALT expression (* (BLOCK (ALT COMMA expression)))))) (RULE literal (BLOCK (ALT INT_LITERAL) (ALT FLOAT_LITERAL) (ALT STRING_LITERAL) (ALT TRUE) (ALT FALSE) (ALT NULL))) (RULE binaryOp (BLOCK (ALT PLUS) (ALT MINUS) (ALT MULT) (ALT DIV) (ALT GT) (ALT LT) (ALT GE) (ALT LE) (ALT EQ) (ALT NEQ) (ALT AND) (ALT OR))) (RULE unaryOp (BLOCK (ALT NOT) (ALT MINUS)))))
+2025-06-28 17:40:24:769 grammar LogManager.java:25 after: (PARSER_GRAMMAR Merlynx (@ header {
+package com.merlab.merlynx.parser;
+}) (OPTIONS (= tokenVocab MerlynxLexer)) (RULES (RULE program (BLOCK (ALT (* (BLOCK (ALT statement))) EOF))) (RULE statement (BLOCK (ALT pipelineDecl) (ALT functionDecl) (ALT ruleDecl) (ALT expressionStatement))) (RULE pipelineDecl (BLOCK (ALT PIPELINE ID NEWLINE pipelineBody END))) (RULE pipelineBody (BLOCK (ALT (+ (BLOCK (ALT pipelineStatement NEWLINE)))))) (RULE pipelineStatement (BLOCK (ALT INPUT COLON ID) (ALT PROCESS COLON expression) (ALT OUTPUT COLON ID))) (RULE functionDecl (BLOCK (ALT FUNCTION ID LPAREN (? (BLOCK (ALT parameterList))) RPAREN block END))) (RULE parameterList (BLOCK (ALT ID (* (BLOCK (ALT COMMA ID)))))) (RULE block (BLOCK (ALT (* (BLOCK (ALT statement)))))) (RULE ruleDecl (BLOCK (ALT RULE ID IMPLIES expression))) (RULE expressionStatement (BLOCK (ALT expression))) (RULE expression (BLOCK (ALT logicalOrExpression))) (RULE logicalOrExpression (BLOCK (ALT logicalAndExpression (* (BLOCK (ALT OR logicalAndExpression)))))) (RULE logicalAndExpression (BLOCK (ALT equalityExpression (* (BLOCK (ALT AND equalityExpression)))))) (RULE equalityExpression (BLOCK (ALT relationalExpression (* (BLOCK (ALT (SET EQ NEQ) relationalExpression)))))) (RULE relationalExpression (BLOCK (ALT additiveExpression (* (BLOCK (ALT (SET GT LT GE LE) additiveExpression)))))) (RULE additiveExpression (BLOCK (ALT multiplicativeExpression (* (BLOCK (ALT (BLOCK (ALT (* (BLOCK (ALT NEWLINE))) (SET PLUS MINUS) (* (BLOCK (ALT NEWLINE))) multiplicativeExpression)))))))) (RULE multiplicativeExpression (BLOCK (ALT unaryExpression (* (BLOCK (ALT (BLOCK (ALT (* (BLOCK (ALT NEWLINE))) (SET MULT DIV) (* (BLOCK (ALT NEWLINE))) unaryExpression)))))))) (RULE unaryExpression (BLOCK (ALT unaryOp unaryExpression) (ALT primaryExpression))) (RULE primaryExpression (BLOCK (ALT literal) (ALT ID LPAREN (? (BLOCK (ALT argumentList))) RPAREN) (ALT ID) (ALT LPAREN expression RPAREN))) (RULE functionCall (BLOCK (ALT ID LPAREN (? (BLOCK (ALT argumentList))) RPAREN))) (RULE argumentList (BLOCK (ALT expression (* (BLOCK (ALT COMMA expression)))))) (RULE literal (BLOCK (ALT (SET INT_LITERAL FLOAT_LITERAL STRING_LITERAL TRUE FALSE NULL)))) (RULE binaryOp (BLOCK (ALT (SET PLUS MINUS MULT DIV GT LT GE LE EQ NEQ AND OR)))) (RULE unaryOp (BLOCK (ALT (SET NOT MINUS))))))
+2025-06-28 17:40:24:841 grammar LogManager.java:25 import PIPELINE=1
+2025-06-28 17:40:24:841 grammar LogManager.java:25 import INPUT=2
+2025-06-28 17:40:24:842 grammar LogManager.java:25 import PROCESS=3
+2025-06-28 17:40:24:842 grammar LogManager.java:25 import OUTPUT=4
+2025-06-28 17:40:24:842 grammar LogManager.java:25 import RULE=5
+2025-06-28 17:40:24:844 grammar LogManager.java:25 import FILTER=6
+2025-06-28 17:40:24:845 grammar LogManager.java:25 import AMPLIFY=7
+2025-06-28 17:40:24:846 grammar LogManager.java:25 import NORMALIZE=8
+2025-06-28 17:40:24:847 grammar LogManager.java:25 import COMBINE=9
+2025-06-28 17:40:24:848 grammar LogManager.java:25 import IF=10
+2025-06-28 17:40:24:849 grammar LogManager.java:25 import THEN=11
+2025-06-28 17:40:24:849 grammar LogManager.java:25 import ELSE=12
+2025-06-28 17:40:24:849 grammar LogManager.java:25 import END=13
+2025-06-28 17:40:24:849 grammar LogManager.java:25 import FOR=14
+2025-06-28 17:40:24:851 grammar LogManager.java:25 import WHILE=15
+2025-06-28 17:40:24:851 grammar LogManager.java:25 import BREAK=16
+2025-06-28 17:40:24:851 grammar LogManager.java:25 import CONTINUE=17
+2025-06-28 17:40:24:851 grammar LogManager.java:25 import FUNCTION=18
+2025-06-28 17:40:24:852 grammar LogManager.java:25 import RETURN=19
+2025-06-28 17:40:24:852 grammar LogManager.java:25 import VAR=20
+2025-06-28 17:40:24:852 grammar LogManager.java:25 import CONST=21
+2025-06-28 17:40:24:854 grammar LogManager.java:25 import LET=22
+2025-06-28 17:40:24:854 grammar LogManager.java:25 import TRUE=23
+2025-06-28 17:40:24:855 grammar LogManager.java:25 import FALSE=24
+2025-06-28 17:40:24:855 grammar LogManager.java:25 import NULL=25
+2025-06-28 17:40:24:856 grammar LogManager.java:25 import AND=26
+2025-06-28 17:40:24:856 grammar LogManager.java:25 import OR=27
+2025-06-28 17:40:24:856 grammar LogManager.java:25 import NOT=28
+2025-06-28 17:40:24:856 grammar LogManager.java:25 import PRINT=29
+2025-06-28 17:40:24:856 grammar LogManager.java:25 import IMPORT=30
+2025-06-28 17:40:24:857 grammar LogManager.java:25 import INT=31
+2025-06-28 17:40:24:857 grammar LogManager.java:25 import FLOAT=32
+2025-06-28 17:40:24:857 grammar LogManager.java:25 import BOOL=33
+2025-06-28 17:40:24:857 grammar LogManager.java:25 import STRING=34
+2025-06-28 17:40:24:857 grammar LogManager.java:25 import SIGNAL=35
+2025-06-28 17:40:24:857 grammar LogManager.java:25 import ARRAY=36
+2025-06-28 17:40:24:858 grammar LogManager.java:25 import MAP=37
+2025-06-28 17:40:24:858 grammar LogManager.java:25 import FACT=38
+2025-06-28 17:40:24:859 grammar LogManager.java:25 import QUERY=39
+2025-06-28 17:40:24:859 grammar LogManager.java:25 import FORALL=40
+2025-06-28 17:40:24:860 grammar LogManager.java:25 import EXISTS=41
+2025-06-28 17:40:24:860 grammar LogManager.java:25 import TRAIN=42
+2025-06-28 17:40:24:862 grammar LogManager.java:25 import PREDICT=43
+2025-06-28 17:40:24:862 grammar LogManager.java:25 import MODEL=44
+2025-06-28 17:40:24:862 grammar LogManager.java:25 import DATASET=45
+2025-06-28 17:40:24:863 grammar LogManager.java:25 import FFT=46
+2025-06-28 17:40:24:863 grammar LogManager.java:25 import IFFT=47
+2025-06-28 17:40:24:863 grammar LogManager.java:25 import DECIMATE=48
+2025-06-28 17:40:24:865 grammar LogManager.java:25 import INTERPOLATE=49
+2025-06-28 17:40:24:865 grammar LogManager.java:25 import IMPLIES=50
+2025-06-28 17:40:24:865 grammar LogManager.java:25 import ID=51
+2025-06-28 17:40:24:866 grammar LogManager.java:25 import INT_LITERAL=52
+2025-06-28 17:40:24:866 grammar LogManager.java:25 import FLOAT_LITERAL=53
+2025-06-28 17:40:24:866 grammar LogManager.java:25 import STRING_LITERAL=54
+2025-06-28 17:40:24:866 grammar LogManager.java:25 import LINE_COMMENT=55
+2025-06-28 17:40:24:866 grammar LogManager.java:25 import BLOCK_COMMENT=56
+2025-06-28 17:40:24:866 grammar LogManager.java:25 import WS=57
+2025-06-28 17:40:24:866 grammar LogManager.java:25 import NEWLINE=58
+2025-06-28 17:40:24:866 grammar LogManager.java:25 import COLON=59
+2025-06-28 17:40:24:866 grammar LogManager.java:25 import LPAREN=60
+2025-06-28 17:40:24:866 grammar LogManager.java:25 import RPAREN=61
+2025-06-28 17:40:24:867 grammar LogManager.java:25 import COMMA=62
+2025-06-28 17:40:24:867 grammar LogManager.java:25 import PLUS=63
+2025-06-28 17:40:24:867 grammar LogManager.java:25 import MINUS=64
+2025-06-28 17:40:24:868 grammar LogManager.java:25 import MULT=65
+2025-06-28 17:40:24:868 grammar LogManager.java:25 import DIV=66
+2025-06-28 17:40:24:868 grammar LogManager.java:25 import GT=67
+2025-06-28 17:40:24:868 grammar LogManager.java:25 import LT=68
+2025-06-28 17:40:24:868 grammar LogManager.java:25 import GE=69
+2025-06-28 17:40:24:869 grammar LogManager.java:25 import LE=70
+2025-06-28 17:40:24:869 grammar LogManager.java:25 import EQ=71
+2025-06-28 17:40:24:869 grammar LogManager.java:25 import NEQ=72
+2025-06-28 17:40:24:870 grammar LogManager.java:25 import 'pipeline'=1
+2025-06-28 17:40:24:870 grammar LogManager.java:25 import 'input'=2
+2025-06-28 17:40:24:870 grammar LogManager.java:25 import 'process'=3
+2025-06-28 17:40:24:871 grammar LogManager.java:25 import 'output'=4
+2025-06-28 17:40:24:871 grammar LogManager.java:25 import 'rule'=5
+2025-06-28 17:40:24:871 grammar LogManager.java:25 import 'filter'=6
+2025-06-28 17:40:24:872 grammar LogManager.java:25 import 'amplify'=7
+2025-06-28 17:40:24:872 grammar LogManager.java:25 import 'normalize'=8
+2025-06-28 17:40:24:872 grammar LogManager.java:25 import 'combine'=9
+2025-06-28 17:40:24:873 grammar LogManager.java:25 import 'if'=10
+2025-06-28 17:40:24:873 grammar LogManager.java:25 import 'then'=11
+2025-06-28 17:40:24:873 grammar LogManager.java:25 import 'else'=12
+2025-06-28 17:40:24:873 grammar LogManager.java:25 import 'end'=13
+2025-06-28 17:40:24:875 grammar LogManager.java:25 import 'for'=14
+2025-06-28 17:40:24:875 grammar LogManager.java:25 import 'while'=15
+2025-06-28 17:40:24:875 grammar LogManager.java:25 import 'break'=16
+2025-06-28 17:40:24:876 grammar LogManager.java:25 import 'continue'=17
+2025-06-28 17:40:24:876 grammar LogManager.java:25 import 'function'=18
+2025-06-28 17:40:24:876 grammar LogManager.java:25 import 'return'=19
+2025-06-28 17:40:24:877 grammar LogManager.java:25 import 'var'=20
+2025-06-28 17:40:24:877 grammar LogManager.java:25 import 'const'=21
+2025-06-28 17:40:24:877 grammar LogManager.java:25 import 'let'=22
+2025-06-28 17:40:24:878 grammar LogManager.java:25 import 'true'=23
+2025-06-28 17:40:24:878 grammar LogManager.java:25 import 'false'=24
+2025-06-28 17:40:24:878 grammar LogManager.java:25 import 'null'=25
+2025-06-28 17:40:24:879 grammar LogManager.java:25 import 'and'=26
+2025-06-28 17:40:24:881 grammar LogManager.java:25 import 'or'=27
+2025-06-28 17:40:24:882 grammar LogManager.java:25 import 'not'=28
+2025-06-28 17:40:24:883 grammar LogManager.java:25 import 'print'=29
+2025-06-28 17:40:24:884 grammar LogManager.java:25 import 'import'=30
+2025-06-28 17:40:24:884 grammar LogManager.java:25 import 'int'=31
+2025-06-28 17:40:24:885 grammar LogManager.java:25 import 'float'=32
+2025-06-28 17:40:24:885 grammar LogManager.java:25 import 'bool'=33
+2025-06-28 17:40:24:886 grammar LogManager.java:25 import 'string'=34
+2025-06-28 17:40:24:886 grammar LogManager.java:25 import 'signal'=35
+2025-06-28 17:40:24:887 grammar LogManager.java:25 import 'array'=36
+2025-06-28 17:40:24:887 grammar LogManager.java:25 import 'map'=37
+2025-06-28 17:40:24:887 grammar LogManager.java:25 import 'fact'=38
+2025-06-28 17:40:24:888 grammar LogManager.java:25 import 'query'=39
+2025-06-28 17:40:24:889 grammar LogManager.java:25 import 'forall'=40
+2025-06-28 17:40:24:889 grammar LogManager.java:25 import 'exists'=41
+2025-06-28 17:40:24:889 grammar LogManager.java:25 import 'train'=42
+2025-06-28 17:40:24:891 grammar LogManager.java:25 import 'predict'=43
+2025-06-28 17:40:24:891 grammar LogManager.java:25 import 'model'=44
+2025-06-28 17:40:24:892 grammar LogManager.java:25 import 'dataset'=45
+2025-06-28 17:40:24:892 grammar LogManager.java:25 import 'fft'=46
+2025-06-28 17:40:24:892 grammar LogManager.java:25 import 'ifft'=47
+2025-06-28 17:40:24:893 grammar LogManager.java:25 import 'decimate'=48
+2025-06-28 17:40:24:893 grammar LogManager.java:25 import 'interpolate'=49
+2025-06-28 17:40:24:894 grammar LogManager.java:25 import ':-'=50
+2025-06-28 17:40:24:894 grammar LogManager.java:25 import ':'=59
+2025-06-28 17:40:24:895 grammar LogManager.java:25 import '('=60
+2025-06-28 17:40:24:895 grammar LogManager.java:25 import ')'=61
+2025-06-28 17:40:24:895 grammar LogManager.java:25 import ','=62
+2025-06-28 17:40:24:896 grammar LogManager.java:25 import '+'=63
+2025-06-28 17:40:24:897 grammar LogManager.java:25 import '-'=64
+2025-06-28 17:40:24:897 grammar LogManager.java:25 import '*'=65
+2025-06-28 17:40:24:899 grammar LogManager.java:25 import '/'=66
+2025-06-28 17:40:24:899 grammar LogManager.java:25 import '>'=67
+2025-06-28 17:40:24:900 grammar LogManager.java:25 import '<'=68
+2025-06-28 17:40:24:900 grammar LogManager.java:25 import '>='=69
+2025-06-28 17:40:24:901 grammar LogManager.java:25 import '<='=70
+2025-06-28 17:40:24:901 grammar LogManager.java:25 import '=='=71
+2025-06-28 17:40:24:902 grammar LogManager.java:25 import '!='=72
+2025-06-28 17:40:24:903 grammar LogManager.java:25 tokens={PIPELINE=1, INPUT=2, PROCESS=3, OUTPUT=4, RULE=5, FILTER=6, AMPLIFY=7, NORMALIZE=8, COMBINE=9, IF=10, THEN=11, ELSE=12, END=13, FOR=14, WHILE=15, BREAK=16, CONTINUE=17, FUNCTION=18, RETURN=19, VAR=20, CONST=21, LET=22, TRUE=23, FALSE=24, NULL=25, AND=26, OR=27, NOT=28, PRINT=29, IMPORT=30, INT=31, FLOAT=32, BOOL=33, STRING=34, SIGNAL=35, ARRAY=36, MAP=37, FACT=38, QUERY=39, FORALL=40, EXISTS=41, TRAIN=42, PREDICT=43, MODEL=44, DATASET=45, FFT=46, IFFT=47, DECIMATE=48, INTERPOLATE=49, IMPLIES=50, ID=51, INT_LITERAL=52, FLOAT_LITERAL=53, STRING_LITERAL=54, LINE_COMMENT=55, BLOCK_COMMENT=56, WS=57, NEWLINE=58, COLON=59, LPAREN=60, RPAREN=61, COMMA=62, PLUS=63, MINUS=64, MULT=65, DIV=66, GT=67, LT=68, GE=69, LE=70, EQ=71, NEQ=72, 'pipeline'=1, 'input'=2, 'process'=3, 'output'=4, 'rule'=5, 'filter'=6, 'amplify'=7, 'normalize'=8, 'combine'=9, 'if'=10, 'then'=11, 'else'=12, 'end'=13, 'for'=14, 'while'=15, 'break'=16, 'continue'=17, 'function'=18, 'return'=19, 'var'=20, 'const'=21, 'let'=22, 'true'=23, 'false'=24, 'null'=25, 'and'=26, 'or'=27, 'not'=28, 'print'=29, 'import'=30, 'int'=31, 'float'=32, 'bool'=33, 'string'=34, 'signal'=35, 'array'=36, 'map'=37, 'fact'=38, 'query'=39, 'forall'=40, 'exists'=41, 'train'=42, 'predict'=43, 'model'=44, 'dataset'=45, 'fft'=46, 'ifft'=47, 'decimate'=48, 'interpolate'=49, ':-'=50, ':'=59, '('=60, ')'=61, ','=62, '+'=63, '-'=64, '*'=65, '/'=66, '>'=67, '<'=68, '>='=69, '<='=70, '=='=71, '!='=72}
+2025-06-28 17:40:24:904 semantics LogManager.java:25 tokens={EOF=-1, PIPELINE=1, INPUT=2, PROCESS=3, OUTPUT=4, RULE=5, FILTER=6, AMPLIFY=7, NORMALIZE=8, COMBINE=9, IF=10, THEN=11, ELSE=12, END=13, FOR=14, WHILE=15, BREAK=16, CONTINUE=17, FUNCTION=18, RETURN=19, VAR=20, CONST=21, LET=22, TRUE=23, FALSE=24, NULL=25, AND=26, OR=27, NOT=28, PRINT=29, IMPORT=30, INT=31, FLOAT=32, BOOL=33, STRING=34, SIGNAL=35, ARRAY=36, MAP=37, FACT=38, QUERY=39, FORALL=40, EXISTS=41, TRAIN=42, PREDICT=43, MODEL=44, DATASET=45, FFT=46, IFFT=47, DECIMATE=48, INTERPOLATE=49, IMPLIES=50, ID=51, INT_LITERAL=52, FLOAT_LITERAL=53, STRING_LITERAL=54, LINE_COMMENT=55, BLOCK_COMMENT=56, WS=57, NEWLINE=58, COLON=59, LPAREN=60, RPAREN=61, COMMA=62, PLUS=63, MINUS=64, MULT=65, DIV=66, GT=67, LT=68, GE=69, LE=70, EQ=71, NEQ=72}
+2025-06-28 17:40:24:905 semantics LogManager.java:25 strings={'pipeline'=1, 'input'=2, 'process'=3, 'output'=4, 'rule'=5, 'filter'=6, 'amplify'=7, 'normalize'=8, 'combine'=9, 'if'=10, 'then'=11, 'else'=12, 'end'=13, 'for'=14, 'while'=15, 'break'=16, 'continue'=17, 'function'=18, 'return'=19, 'var'=20, 'const'=21, 'let'=22, 'true'=23, 'false'=24, 'null'=25, 'and'=26, 'or'=27, 'not'=28, 'print'=29, 'import'=30, 'int'=31, 'float'=32, 'bool'=33, 'string'=34, 'signal'=35, 'array'=36, 'map'=37, 'fact'=38, 'query'=39, 'forall'=40, 'exists'=41, 'train'=42, 'predict'=43, 'model'=44, 'dataset'=45, 'fft'=46, 'ifft'=47, 'decimate'=48, 'interpolate'=49, ':-'=50, ':'=59, '('=60, ')'=61, ','=62, '+'=63, '-'=64, '*'=65, '/'=66, '>'=67, '<'=68, '>='=69, '<='=70, '=='=71, '!='=72}
+2025-06-28 17:40:24:950 LL1 LogManager.java:25 
+DECISION 0 in rule program
+2025-06-28 17:40:24:952 LL1 LogManager.java:25 look=[{1, 5, 18, 23..25, 28, 51..54, 60, 64}, <EOF>]
+2025-06-28 17:40:24:955 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:955 LL1 LogManager.java:25 
+DECISION 1 in rule statement
+2025-06-28 17:40:24:957 LL1 LogManager.java:25 look=[1, 18, 5, {23..25, 28, 51..54, 60, 64}]
+2025-06-28 17:40:24:957 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:958 LL1 LogManager.java:25 
+DECISION 2 in rule pipelineBody
+2025-06-28 17:40:24:958 LL1 LogManager.java:25 look=[{2..4}, 13]
+2025-06-28 17:40:24:958 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:959 LL1 LogManager.java:25 
+DECISION 3 in rule pipelineStatement
+2025-06-28 17:40:24:959 LL1 LogManager.java:25 look=[2, 3, 4]
+2025-06-28 17:40:24:959 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:960 LL1 LogManager.java:25 
+DECISION 4 in rule functionDecl
+2025-06-28 17:40:24:960 LL1 LogManager.java:25 look=[51, 61]
+2025-06-28 17:40:24:961 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:961 LL1 LogManager.java:25 
+DECISION 5 in rule parameterList
+2025-06-28 17:40:24:961 LL1 LogManager.java:25 look=[62, 61]
+2025-06-28 17:40:24:962 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:962 LL1 LogManager.java:25 
+DECISION 6 in rule block
+2025-06-28 17:40:24:962 LL1 LogManager.java:25 look=[{1, 5, 18, 23..25, 28, 51..54, 60, 64}, 13]
+2025-06-28 17:40:24:962 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:964 LL1 LogManager.java:25 
+DECISION 7 in rule logicalOrExpression
+2025-06-28 17:40:24:964 LL1 LogManager.java:25 look=[27, {<EOF>, 1, 5, 13, 18, 23..25, 28, 51..54, 58, 60..62, 64}]
+2025-06-28 17:40:24:965 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:965 LL1 LogManager.java:25 
+DECISION 8 in rule logicalAndExpression
+2025-06-28 17:40:24:966 LL1 LogManager.java:25 look=[26, {<EOF>, 1, 5, 13, 18, 23..25, 27..28, 51..54, 58, 60..62, 64}]
+2025-06-28 17:40:24:966 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:966 LL1 LogManager.java:25 
+DECISION 9 in rule equalityExpression
+2025-06-28 17:40:24:968 LL1 LogManager.java:25 look=[{71..72}, {<EOF>, 1, 5, 13, 18, 23..28, 51..54, 58, 60..62, 64}]
+2025-06-28 17:40:24:968 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:968 LL1 LogManager.java:25 
+DECISION 10 in rule relationalExpression
+2025-06-28 17:40:24:969 LL1 LogManager.java:25 look=[{67..70}, {<EOF>, 1, 5, 13, 18, 23..28, 51..54, 58, 60..62, 64, 71..72}]
+2025-06-28 17:40:24:969 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:969 LL1 LogManager.java:25 
+DECISION 11 in rule additiveExpression
+2025-06-28 17:40:24:969 LL1 LogManager.java:25 look=[58, {63..64}]
+2025-06-28 17:40:24:969 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:971 LL1 LogManager.java:25 
+DECISION 12 in rule additiveExpression
+2025-06-28 17:40:24:971 LL1 LogManager.java:25 look=[58, {23..25, 28, 51..54, 60, 64}]
+2025-06-28 17:40:24:971 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:971 LL1 LogManager.java:25 
+DECISION 13 in rule additiveExpression
+2025-06-28 17:40:24:971 LL1 LogManager.java:25 look=[{58, 63..64}, {<EOF>, 1, 5, 13, 18, 23..28, 51..54, 58, 60..62, 64, 67..72}]
+2025-06-28 17:40:24:972 LL1 LogManager.java:25 LL(1)? false
+2025-06-28 17:40:24:972 LL1 LogManager.java:25 
+DECISION 14 in rule multiplicativeExpression
+2025-06-28 17:40:24:972 LL1 LogManager.java:25 look=[58, {65..66}]
+2025-06-28 17:40:24:973 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:974 LL1 LogManager.java:25 
+DECISION 15 in rule multiplicativeExpression
+2025-06-28 17:40:24:974 LL1 LogManager.java:25 look=[58, {23..25, 28, 51..54, 60, 64}]
+2025-06-28 17:40:24:974 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:975 LL1 LogManager.java:25 
+DECISION 16 in rule multiplicativeExpression
+2025-06-28 17:40:24:975 LL1 LogManager.java:25 look=[{58, 65..66}, {<EOF>, 1, 5, 13, 18, 23..28, 51..54, 58, 60..64, 67..72}]
+2025-06-28 17:40:24:976 LL1 LogManager.java:25 LL(1)? false
+2025-06-28 17:40:24:976 LL1 LogManager.java:25 
+DECISION 17 in rule unaryExpression
+2025-06-28 17:40:24:976 LL1 LogManager.java:25 look=[{28, 64}, {23..25, 51..54, 60}]
+2025-06-28 17:40:24:976 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:977 LL1 LogManager.java:25 
+DECISION 18 in rule primaryExpression
+2025-06-28 17:40:24:977 LL1 LogManager.java:25 look=[{23..25, 28, 51..54, 60, 64}, 61]
+2025-06-28 17:40:24:977 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:978 LL1 LogManager.java:25 
+DECISION 19 in rule primaryExpression
+2025-06-28 17:40:24:978 LL1 LogManager.java:25 look=[{23..25, 52..54}, 51, 51, 60]
+2025-06-28 17:40:24:980 LL1 LogManager.java:25 LL(1)? false
+2025-06-28 17:40:24:980 LL1 LogManager.java:25 
+DECISION 20 in rule functionCall
+2025-06-28 17:40:24:980 LL1 LogManager.java:25 look=[{23..25, 28, 51..54, 60, 64}, 61]
+2025-06-28 17:40:24:981 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:981 LL1 LogManager.java:25 
+DECISION 21 in rule argumentList
+2025-06-28 17:40:24:981 LL1 LogManager.java:25 look=[62, 61]
+2025-06-28 17:40:24:981 LL1 LogManager.java:25 LL(1)? true
+2025-06-28 17:40:24:982 action-translator LogManager.java:25 translate 
+package com.merlab.merlynx.parser;
+
+2025-06-28 17:40:25:173 action-translator LogManager.java:25 translate 
+package com.merlab.merlynx.parser;
+
+2025-06-28 17:40:25:174 action-translator LogManager.java:25 translate 
+package com.merlab.merlynx.parser;
+
+2025-06-28 17:40:25:183 action-translator LogManager.java:25 translate 
+package com.merlab.merlynx.parser;
+
+2025-06-28 17:40:25:183 action-translator LogManager.java:25 translate 
+package com.merlab.merlynx.parser;
+
+2025-06-28 17:40:25:192 action-translator LogManager.java:25 translate 
+package com.merlab.merlynx.parser;
+
+2025-06-28 17:40:25:194 action-translator LogManager.java:25 translate 
+package com.merlab.merlynx.parser;
+
+2025-06-28 17:40:25:201 action-translator LogManager.java:25 translate 
+package com.merlab.merlynx.parser;
+
+2025-06-28 17:40:25:201 action-translator LogManager.java:25 translate 
+package com.merlab.merlynx.parser;
+

@@ -5,8 +5,8 @@
 package com.merlab.merlynx;
 
 
-import com.merlab.merlynx.parser.MerlynxLexer;
-import com.merlab.merlynx.parser.MerlynxParser;
+//import com.merlab.merlynx.lexer.MerlynxLexer;
+//import com.merlab.merlynx.parser.MerlynxParser;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 
@@ -22,7 +22,7 @@ public class MerlynxCore {
     public static void main(String[] args) throws IOException {
         // Ejemplo de código Merlynx
         System.out.println("Hello World! Now Merlynx is officially born in English!!");
-        
+        /*
         String code = "pipeline simple_pipeline {\n" +
                       "    input: signal1;\n" +
                       "    process: filter(signal1);\n" +
@@ -43,6 +43,6 @@ public class MerlynxCore {
         // Imprimir el árbol sintáctico en consola
         System.out.println(tree.toStringTree(parser));
 
-        
+        */
     }
 }
